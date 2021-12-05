@@ -1,3 +1,9 @@
+<?php 
+var_dump($_POST['do']);
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +15,7 @@
 <body>
 	今日やるべきこと
 	<br>
-	<a href="input.php">登録しにいく！！！！！！！</a>
+	<a href="form/input.php">登録しにいく！！！！！！！</a>
 	<table border="2"  bordercolor="red">
 		<tr>
 			<th><input type="checkbox" name="checkbox" checked></th>			
