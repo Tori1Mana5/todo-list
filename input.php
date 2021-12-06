@@ -2,7 +2,11 @@
 
 session_start();
 
+require 'validation.php';
+
 header('X-FRAME-OPTIONS:DENY');
+
+$errors = validation($_POST);
 ?>
 
 <!DOCTYPE html>
@@ -15,12 +19,22 @@ header('X-FRAME-OPTIONS:DENY');
 </head>
 <body>
 
+<?php if(!empty($errors) && !empty($_POST['btn_confirm'])): ?>
+	<?php echo '<ul>'; ?>
+	<?php 
+		foreach($errors as $error){
+			echo '<li>'. $error . '</li>';
+		}
+	?>
+	<?php echo '</ul>'; ?>
+<?php endif; ?>
 登録画面です
 <form method="post" action="confirm.php">
 	やることは？
-	<input type="text" name="do">
-	<input type="hidden" name="csrf" value="<?php echo $token; ?>">
-	<input type="submit" value="確認する">
+	<br>
+	<textarea name="do"></textarea>
+	<br>
+	<input type="submit" name="btn_confirm" value="確認する">
 </form>
 <a href="index.php">一覧に戻る</a>
 
