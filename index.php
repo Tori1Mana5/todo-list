@@ -1,9 +1,6 @@
 <?php 
-var_dump($_POST['do']);
-
-
+	header('X-FRAME-OPTIONS:DENY');
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +12,7 @@ var_dump($_POST['do']);
 <body>
 	今日やるべきこと
 	<br>
-	<a href="form/input.php">登録しにいく！！！！！！！</a>
+	<a href="input.php">登録しにいく！！！！！！！</a>
 	<table border="2"  bordercolor="red">
 		<tr>
 			<th><input type="checkbox" name="checkbox" checked></th>			
