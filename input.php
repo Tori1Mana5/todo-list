@@ -32,7 +32,7 @@ $errors = validation($_POST);
 <form method="post" action="confirm.php">
 	やることは？
 	<br>
-	<textarea name="do"></textarea>
+	<textarea name="todo"></textarea>
 	<br>
 	<input type="submit" name="btn_confirm" value="確認する">
 </form>

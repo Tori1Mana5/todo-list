@@ -17,9 +17,9 @@
 <body>
 <form method="post" action="thanks.php">
 	やること:
-  <?php echo h($_POST['do']); ?>
+  <?php echo h($_POST['todo']); ?>
   <br>
-  <input type="hidden" name="do" value="<?php echo h($_POST['do']); ?>">
+  <input type="hidden" name="todo" value="<?php echo h($_POST['todo']); ?>">
   <input type="submit" value="登録する">
 </form>
 <br>
